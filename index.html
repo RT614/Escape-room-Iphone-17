@@ -89,6 +89,10 @@ function submitAnswer() {
   const correctAnswer = questions[current].a;
   const allOptions = document.querySelectorAll("input[name='answer']");
 
+if (selected.value === correctAnswer) {
+  correct++; // ✅ increment correct answers
+}
+
   allOptions.forEach(option => {
     option.disabled = true; // prevent further changes
     if (option.value === correctAnswer) {
