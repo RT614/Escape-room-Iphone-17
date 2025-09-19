@@ -98,13 +98,6 @@ function submitAnswer() {
     }
   });
 
-  if (selected.value === correctAnswer) {
-    correct++;
-    document.getElementById("correctSound").play();
-  } else {
-    document.getElementById("wrongSound").play();
-  }
-
   // Add a delay before moving to the next question
   setTimeout(() => {
     current++;
