@@ -82,17 +82,6 @@
             `;
         }
 
-        function submitAnswer() {
-            const selected = document.querySelector("input[name='answer']:checked");
-            if (!selected) return alert("Please select an answer.");
-            if (selected.value === questions[current].a) correct++;
-            current++;
-            if (current < questions.length) {
-                showQuestion();
-            } else {
-                endGame();
-            }
-        }
 function submitAnswer() {
   const selected = document.querySelector("input[name='answer']:checked");
   if (!selected) return alert("Select an answer");
