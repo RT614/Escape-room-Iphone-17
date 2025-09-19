@@ -118,7 +118,7 @@ if (selected.value === correctAnswer) {
             const timeTaken = new Date(endTime - startTime).toISOString().substr(11, 8);
             const timestamp = endTime.toLocaleString();
             const name = document.getElementById("playerName").value;
-             const gameTitle = document.querySelector("h1").innerText;
+             const gameTitle = document.querySelector("title").innerText;
             const entry = { name, correct, timeTaken, timestamp, gameTitle };
             let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
             leaderboard.push(entry);
